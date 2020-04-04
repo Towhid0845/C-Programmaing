@@ -1,13 +1,17 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int p,q,r,s,n;
-    printf("Input a Three digit number:");
+    int n,x,reverse=0;
+    printf("Please enter a number:");
     scanf("%d",&n);
-    p=n%10;
-    q=n/10;
-    r=q%10;
-    s=q/10;
-    printf("The reverse number:%d%d%d",p,r,s);
+    printf("\n");
+    while(n!=0)
+    {
+        x=n%10;
+        reverse=reverse*10+x;
+        n=n/10;
+    }
+        printf("The reverse number is:%d",reverse);
     return 0;
 }
+
